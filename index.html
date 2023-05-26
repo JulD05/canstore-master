@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Jardin de Jules</title>
+  <link href="https://fonts.googleapis.com/css?family=Cherry+Swash|Raleway" rel="stylesheet">
+  <link href="can-style.css" rel="stylesheet">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <!-- Partie 1 de la navbar -->
+  <nav class="navbar mb-2 bg-success text-white fixed-top col-12">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="btnReset" onclick="resetPanier()">
+          <img src="icons/logo.ico" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          Le Jardin de Jules
+        </a>
+      <!-- Partie 2 de la navbar -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+            <img src="icons/loupe.ico" class="d-inline-block align-text-top" width="30" height="30" alt="">
+        </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Le jardin de Jules</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="btn-group">
+              <button id="Panier" class="btn btn-primary" >
+              <img src="icons/panier.ico"class="d-inline-block align-text-top" width="30" height="30" alt="">
+              <p id="count">0</p>
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                
+                    <form name="choix" class="d-flex flex-wrap gap-2">
+                        <select class="form-select m-2" name="categorie">
+                          <option selected value="0">Catégories</option>
+                          <option value="1">Légumes</option>
+                          <option value="2">Soupes</option>
+                          <option value="3">Viandes</option>
+                        </select>
+
+                    <select class="form-select m-2" name="nutri">
+                        <option selected value="0">Nutri-Score</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                      </select>
+
+
+                   
+                  <label for="searchTerm"></label>
+                  <input class="form-control m-2 btn-small" type="text" id="searchTerm" placeholder="Rechecher" aria-label="Search" list="listeValeurs" autocomplete="off">
+                  <datalist id="listeValeurs">
+                  </datalist>
+
+              </ul>
+
+              </form>
+            </div>
+          </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid d-flex justify-content-center bg-dark">
+    <main class="row row-cols-1 row-cols-sm-2 row-cols-md-4 container mt-5 d-flex flex-sm-wrap pt-5 text-success">
+    </main>
+  </div>
+
+
+  <script src="can-script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
